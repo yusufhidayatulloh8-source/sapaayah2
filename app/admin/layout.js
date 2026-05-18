@@ -25,14 +25,14 @@ export default async function AdminLayout({ children }) {
   return (
     <html lang="id">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <div className="admin-layout">
+        <div className="admin-shell">
           <AdminSidebar userProfile={profile} />
-          <div className="admin-main">
-            <AdminTopbar />
-            <div className="admin-content">
+          <div className="main-panel">
+            <AdminTopbar userProfile={profile} />
+            <div className="admin-content" style={{ padding: '2rem' }}>
               {children}
             </div>
           </div>
